@@ -18,10 +18,10 @@ export default function Navbar(props) {
             {/* <Link className="nav-link active" aria-current="page" to="/">Home</Link> */}
             <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li className="nav-item">
-            {/* <Link className="nav-link"  to="/about">{props.aboutText}</Link> */}
+          {/* <li className="nav-item">
+            <Link className="nav-link"  to="/about">{props.aboutText}</Link>
             <a className="nav-link"  href="/about">{props.aboutText}</a>
-          </li>
+          </li> */}
         </ul>
         {/* <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

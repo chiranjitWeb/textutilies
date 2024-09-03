@@ -65,11 +65,11 @@ export default function TextForm(props) {
     //     document.querySelector('.container').style.backgroundColor = "white";
     //   }
     
-      const handleDarkTheme = () => {
-        document.querySelector('.container').style.backgroundColor = "black";
-        document.querySelector('.container').style.color = "white";
+      // const handleDarkTheme = () => {
+      //   document.querySelector('.container').style.backgroundColor = "black";
+      //   document.querySelector('.container').style.color = "white";
         
-      }
+      // }
 
       const  pallindromechecker = () =>{
         let rstring = "";
@@ -128,7 +128,7 @@ export default function TextForm(props) {
        <button className="btn btn-primary mx-2"  onClick={handleDuplicateClick}>Duplicate check</button>
        <button className="btn btn-secondary mx-2"  onClick={handleExpress}>Remove Extra Spaces</button>
        {/* <button className="btn btn-primary mx-2"  onClick={handleLightTheme}>LightTheme</button> */}
-       <button className="btn  btn-info mx-2"  onClick={handleDarkTheme}>DarkTheme</button>
+       {/* <button className="btn  btn-info mx-2"  onClick={handleDarkTheme}>DarkTheme</button> */}
        <button className="btn  btn-secondary mx-2"  onClick={pallindromechecker}>CheckPallindrome</button>
        <button className="btn btn-primary mx-2"  onClick={Reverse}>RverseOrder</button>
        <button className="btn  btn-info mx-2 my-2" onClick={speak}>Speak</button>
