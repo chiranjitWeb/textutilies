@@ -123,16 +123,16 @@ export default function TextForm(props) {
             <textarea className="form-control" value={text} onChange={ handleOnChange } style={{backgroundColor:props.mode === 'dark' ? 'grey' : 'white',
                 color:props.mode === 'dark' ? 'white' : '#042743'}} id="myBox" rows="10"></textarea>
         </div>
-       <button className="btn btn-primary mx-2"  onClick={handleUpClick}>Convert to Upercase</button>
-       <button className="btn  btn-secondary mx-2"  onClick={handlelowerpClick}>Convert to Lowercase</button>
-       <button className="btn btn-primary mx-2"  onClick={handleDuplicateClick}>Duplicate check</button>
-       <button className="btn btn-secondary mx-2"  onClick={handleExpress}>Remove Extra Spaces</button>
+       <button className="btn btn-primary mx-1 my-1"  onClick={handleUpClick}>Convert to Upercase</button>
+       <button className="btn  btn-secondary mx-1 my-1"  onClick={handlelowerpClick}>Convert to Lowercase</button>
+       <button className="btn btn-primary mx-1 my-1"  onClick={handleDuplicateClick}>Duplicate check</button>
+       <button className="btn btn-secondary mx-1 my-1"  onClick={handleExpress}>Remove Extra Spaces</button>
        {/* <button className="btn btn-primary mx-2"  onClick={handleLightTheme}>LightTheme</button> */}
        {/* <button className="btn  btn-info mx-2"  onClick={handleDarkTheme}>DarkTheme</button> */}
-       <button className="btn  btn-secondary mx-2"  onClick={pallindromechecker}>CheckPallindrome</button>
-       <button className="btn btn-primary mx-2"  onClick={Reverse}>RverseOrder</button>
-       <button className="btn  btn-info mx-2 my-2" onClick={speak}>Speak</button>
-       <button className="btn btn-warning mx-2 my-2"  onClick={handleClearClick}>Clear</button>
+       <button className="btn  btn-secondary mx-1 my-1"  onClick={pallindromechecker}>CheckPallindrome</button>
+       <button className="btn btn-primary mx-1 my-1"  onClick={Reverse}>RverseOrder</button>
+       <button className="btn  btn-info mx-2 my-1 my-1" onClick={speak}>Speak</button>
+       <button className="btn btn-warning mx-2 my-1 my-1"  onClick={handleClearClick}>Clear</button>
        
        {/* <button onClick={() => setCount2()}>
         Click me{count}
@@ -142,7 +142,8 @@ export default function TextForm(props) {
                 color:props.mode === 'dark' ? 'white' : '#042743'}} >
         <h1>Your text summary</h1>
         {/* <p>{countWords(text)}<b>{text.split(" ").length}</b> words and <b>{text.length}</b> characters</p> */}
-        <p><b>{text.split(/\s+/).length - 1}</b> words and <b>{text.length-text.split(" ").length+1}</b> characters</p>
+        {/* <p><b>{text.split(/\s+/).length - 1}</b> words</p>  */}
+        <p> <b>{text.split(" ").filter((elm)=>{return elm.length!==0}).length}</b> words  <b>{text.length-text.split(" ").length+1}</b> characters</p>
         {/* <p>{text.split(" ").length-1 } words and {1000-text.length-1} characters</p> */}
         <p><b>{0.008 * text.split(" ").length}</b> Minutes read</p>
         <h2>Preview</h2>

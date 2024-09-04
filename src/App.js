@@ -3,11 +3,8 @@ import React, {useState} from 'react';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-
-//import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-
-//import About from './components/About';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from './components/About';
 function App() {
   const [mode, setMode] = useState('light');//// weather darkmode ennable or not  (`bcktick`)
   
@@ -35,12 +32,12 @@ function App() {
   return (
   <>
 
- {/* <BrowserRouter>
+ <BrowserRouter>
      <Navbar title="TextUtils" aboutText="ABOUT US" mode={mode} toggleMode={toggleMode}/>
      <Alert alert={alert}/>
      <div className="container my-3">
      <Routes>
-            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/about" element={<About mode={mode} />}></Route>
             <Route
               exact path="/"
               element={
@@ -50,12 +47,12 @@ function App() {
             
       </Routes>
     </div>
-</BrowserRouter> */}
-<Navbar title="TextUtils" aboutText="ABOUT US" mode={mode} toggleMode={toggleMode}/>
+</BrowserRouter>
+{/* <Navbar title="TextUtils" aboutText="ABOUT US" mode={mode} toggleMode={toggleMode}/>
 <Alert alert={alert}/>
 <div className="container my-3">
 <TextForm showAlert = {showAlert} heading="Enter the text" mode={mode}/>
-</div>
+</div> */}
  
   </>
   );
