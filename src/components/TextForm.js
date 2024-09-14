@@ -71,23 +71,23 @@ export default function TextForm(props) {
         
       // }
 
-      const  pallindromechecker = () =>{
-        let rstring = "";
-        for (let i = text.length - 1; i >= 0; i--) { 
-            rstring += text[i]; // or rstring = rstring + text[i];
-        }
-        if(text.length===0){
-          return 'pallindromic checker'
-        }
-        else if(rstring===text){
+      // const  pallindromechecker = () =>{
+      //   let rstring = "";
+      //   for (let i = text.length - 1; i >= 0; i--) { 
+      //       rstring += text[i]; // or rstring = rstring + text[i];
+      //   }
+      //   if(text.length===0){
+      //     return 'pallindromic checker'
+      //   }
+      //   else if(rstring===text){
 
-            setPText('Yes');
+      //       setPText('Yes');
           
-        }
-        else{
-            setPText('No');
-        }
-      }
+      //   }
+      //   else{
+      //       setPText('No');
+      //   }
+      // }
 
       const Reverse = () => {
         let givenText=text;
@@ -123,16 +123,16 @@ export default function TextForm(props) {
             <textarea className="form-control" value={text} onChange={ handleOnChange } style={{backgroundColor:props.mode === 'dark' ? 'grey' : 'white',
                 color:props.mode === 'dark' ? 'white' : '#042743'}} id="myBox" rows="10"></textarea>
         </div>
-       <button className="btn btn-primary mx-1 my-1"  onClick={handleUpClick}>Convert to Upercase</button>
-       <button className="btn  btn-secondary mx-1 my-1"  onClick={handlelowerpClick}>Convert to Lowercase</button>
-       <button className="btn btn-primary mx-1 my-1"  onClick={handleDuplicateClick}>Duplicate check</button>
-       <button className="btn btn-secondary mx-1 my-1"  onClick={handleExpress}>Remove Extra Spaces</button>
-       {/* <button className="btn btn-primary mx-2"  onClick={handleLightTheme}>LightTheme</button> */}
+       <button className="btn btn-primary mx-2 my-2"  onClick={handleUpClick}>Convert to Upercase</button>
+       <button className="btn  btn-primary mx-2 my-2"  onClick={handlelowerpClick}>Convert to Lowercase</button>
+       <button className="btn btn-primary mx-2 my-2"  onClick={handleDuplicateClick}>Duplicate check</button>
+       <button className="btn btn-primary mx-2 my-2"  onClick={handleExpress}>Remove Extra Spaces</button>
+       {/* <button className="btn btn-primary mx-2 my-2"  onClick={handleLightTheme}>LightTheme</button> */}
        {/* <button className="btn  btn-info mx-2"  onClick={handleDarkTheme}>DarkTheme</button> */}
-       <button className="btn  btn-secondary mx-1 my-1"  onClick={pallindromechecker}>CheckPallindrome</button>
-       <button className="btn btn-primary mx-1 my-1"  onClick={Reverse}>RverseOrder</button>
-       <button className="btn  btn-info mx-2 my-1 my-1" onClick={speak}>Speak</button>
-       <button className="btn btn-warning mx-2 my-1 my-1"  onClick={handleClearClick}>Clear</button>
+      {/* <button className="btn  btn-primary mx-1 my-1"  onClick={pallindromechecker}>CheckPallindrome</button>*/}
+       <button className="btn btn-primary mx-2 my-2"  onClick={Reverse}>RverseOrder</button>
+       <button className="btn  btn-primary mx-2 my-2" onClick={speak}>Speak</button>
+       <button className="btn btn-warning mx-2  my-2"  onClick={handleClearClick}>Clear</button>
        
        {/* <button onClick={() => setCount2()}>
         Click me{count}
